@@ -26,12 +26,14 @@ public class TutorialOre extends BlockStone {
 
 
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister reg) {
+    public void registerBlockIcons(IIconRegister reg)
+    {
         this.blockIcon = reg.registerIcon(TutorialMod.modid + ":" + "tutore");
     }
 
     @Override
-    protected void dropBlockAsItem(World world, int x, int y, int z, ItemStack stack) {
+    protected void dropBlockAsItem(World world, int x, int y, int z, ItemStack stack)
+    {
         ItemStack output = new ItemStack(TutorialMod.tutOre, stack.stackSize);
         super.dropBlockAsItem(world, x, y, z, output);
     }
